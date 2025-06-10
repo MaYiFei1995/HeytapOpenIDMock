@@ -5,3 +5,9 @@
 模拟一个`OPEN_ID_SERVICE`返回一个随机字符串，生成规则没有与真正的服务匹配
 
 此项目仅用于学习、研究，不可用于生产环境
+
+## 效果
+
+| APP | OAID |
+| --- | --- |
+|![app](img/app.png) | ![oaid](img/oaid.png) |
