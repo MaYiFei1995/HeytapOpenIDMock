@@ -8,11 +8,10 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.heytap.openid"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -36,6 +35,19 @@ android {
     buildFeatures {
         aidl = true
         viewBinding = true
+    }
+    flavorDimensions += "default"
+    productFlavors {
+        // for oppo device
+        register("oppo") {
+            applicationId = "com.heytap.openid"
+            manifestPlaceholders["APP_NAME"] = "OPPOID"
+        }
+        // for oplus device with msa sdk lower version
+        register("oplus") {
+            applicationId = "com.coloros.mcs"
+            manifestPlaceholders["APP_NAME"] = "OPLUSID"
+        }
     }
 }
 

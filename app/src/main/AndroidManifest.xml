@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
+        android:label="${APP_NAME}"
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
@@ -18,11 +18,19 @@
         </activity>
 
         <service
-            android:name=".IdentifyService"
+            android:name="com.heytap.openid.IdentifyService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="action.com.heytap.openid.OPEN_ID_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.oplus.stdid.IdentifyService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="action.com.oplus.stdid.ID_SERVICE" />
             </intent-filter>
         </service>
     </application>

@@ -11,3 +11,7 @@
 | APP | OAID |
 | --- | --- |
 |![app](img/app.png) | ![oaid](img/oaid.png) |
+
+## 已知问题
+
+1.1.0 及以前版本无法 MOCK
