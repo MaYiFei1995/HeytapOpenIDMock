@@ -33,6 +33,20 @@
                 <action android:name="action.com.oplus.stdid.ID_SERVICE" />
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="使服务对所有应用强制可见（解决 API 30+ 可见性限制）" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+        <meta-data
+            android:name="xposedscope"
+            android:value="android" />
+
     </application>
 
 </manifest>

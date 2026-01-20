@@ -52,4 +52,5 @@ android {
 }
 
 dependencies {
+    compileOnly(libs.xposed.api)
 }

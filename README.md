@@ -6,12 +6,16 @@
 
 此项目仅用于学习、研究，不可用于生产环境
 
+## 低版本的使用说明
+
+由于三方系统没有将此应用添加到`forceQueryable`列表中，API30+ 如果应用没有显示声明`<queries>`，则会导致`isSupport=false`
+
+所以需要你的应用声明`<queries> <package name="com.heytap.openid" />`，或直接粗暴简单的声明`<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />`
+
+如果你的设备支持`xposed`，可以直接开启此模块并勾选允许`System Framework`
+
 ## 效果
 
 | APP | OAID |
 | --- | --- |
 |![app](img/app.png) | ![oaid](img/oaid.png) |
-
-## 已知问题
-
-1.1.0 及以前版本无法 MOCK
